@@ -20,8 +20,9 @@ var indexRoutes=require("./routes/index");
 
 
 mongoose.set('useNewUrlParser', true);
-mongoose.connect("mongodb://localhost/yelp_camp");
-
+//mongoose.connect("mongodb://localhost/yelp_camp");
+const uri = "mongodb+srv://kartikpuri:kartik720@yelpcamp-pp6ew.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(uri);
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
