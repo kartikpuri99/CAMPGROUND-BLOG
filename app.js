@@ -21,8 +21,8 @@ var indexRoutes=require("./routes/index");
 
 mongoose.set('useNewUrlParser', true);
 //mongoose.connect("mongodb://localhost/yelp_camp");
-const uri = "mongodb+srv://kartikpuri:kartik720@yelpcamp-pp6ew.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(uri);
+
+mongoose.connect("mongodb://kartikpuri99:kartik720@yelpcamp-shard-00-00-pp6ew.mongodb.net:27017,yelpcamp-shard-00-01-pp6ew.mongodb.net:27017,yelpcamp-shard-00-02-pp6ew.mongodb.net:27017/test?ssl=true&replicaSet=YelpCamp-shard-0&authSource=admin&retryWrites=true&w=majority");
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
