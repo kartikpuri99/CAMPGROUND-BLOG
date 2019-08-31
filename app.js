@@ -20,9 +20,8 @@ var indexRoutes=require("./routes/index");
 
 
 mongoose.set('useNewUrlParser', true);
-//mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb+srv://admin-kartik:kartik720@cluster0-pp6ew.mongodb.net/yelp_camp");
 
-mongoose.connect("mongodb://kartikpuri99:kartik720@yelpcamp-shard-00-00-pp6ew.mongodb.net:27017,yelpcamp-shard-00-01-pp6ew.mongodb.net:27017,yelpcamp-shard-00-02-pp6ew.mongodb.net:27017/test?ssl=true&replicaSet=YelpCamp-shard-0&authSource=admin&retryWrites=true&w=majority");
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
